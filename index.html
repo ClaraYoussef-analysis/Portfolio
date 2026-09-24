@@ -1,101 +1,1784 @@
 <!DOCTYPE html>
-
 <html lang="en">
+
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width,initial-scale=1" name="viewport"/>
+
+<meta charset="utf-8">
+
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Clara Youssef — Data Analyst Portfolio</title>
-<meta content="Clara Youssef — Data Analyst portfolio featuring Power BI, Looker Studio, Excel and Google Sheets dashboards." name="description"/>
+
+<meta
+content="Clara Youssef — Data Analyst portfolio featuring Power BI, Looker Studio, Excel and Google Sheets dashboards."
+name="description"
+/>
+
 <style>
-:root{--navy:#102A43;--blue:#1F5A91;--ink:#172B3A;--muted:#5B6B7A;--bg:#F6F8FA;--card:#fff;--line:#D9E1E8;--accent:#D9A441}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.55}
-a{color:inherit}.wrap{max-width:1120px;margin:auto;padding:0 28px}
-nav{position:sticky;top:0;z-index:20;background:rgba(246,248,250,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.nav{height:62px;display:flex;align-items:center;justify-content:space-between}.brand{font-weight:800;color:var(--navy)}.links{display:flex;gap:24px;font-size:14px;color:var(--muted)}.links a{text-decoration:none}.links a:hover{color:var(--navy)}
-.hero{padding:82px 0 48px;background:linear-gradient(180deg,#fff 0%,var(--bg) 100%)}.eyebrow{font-size:13px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);font-weight:800}
-h1{font-size:clamp(40px,6vw,68px);line-height:1.02;margin:10px 0 14px;color:var(--navy);max-width:760px}.hero p{font-size:19px;color:var(--muted);max-width:760px}
-.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.btn{display:inline-block;padding:11px 18px;border-radius:7px;border:1px solid var(--navy);text-decoration:none;font-weight:700;font-size:14px}.primary{background:var(--navy);color:#fff}.secondary{background:#fff;color:var(--navy)}
-.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:38px}.kpi{background:#fff;border:1px solid var(--line);padding:20px;border-radius:9px}.kpi b{display:block;font-size:25px;color:var(--navy)}.kpi span{font-size:12px;color:var(--muted)}
-section{padding:68px 0;border-top:1px solid var(--line)}.section-title{font-size:14px;text-transform:uppercase;letter-spacing:.12em;color:var(--blue);font-weight:800;margin-bottom:12px}.about{max-width:780px;font-size:18px;color:var(--muted)}
-.tools{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.tool{background:#fff;border:1px solid var(--line);padding:18px;border-radius:9px}.tool b{color:var(--navy)}.tool span{display:block;color:var(--muted);font-size:13px;margin-top:5px}
-.projects{display:grid;grid-template-columns:1fr;gap:26px}.project{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}.project-head{padding:24px 24px 10px;display:flex;justify-content:space-between;gap:16px;align-items:start}.project h3{margin:0;color:var(--navy);font-size:23px}.tag{white-space:nowrap;border:1px solid #B8C9D8;color:var(--blue);border-radius:20px;padding:4px 10px;font-size:12px;font-weight:800}.desc{padding:0 24px;color:var(--muted);max-width:900px}.figs{display:flex;flex-wrap:wrap;gap:10px 24px;padding:16px 24px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin-top:14px}.fig{font-size:13px;color:var(--muted)}.fig b{color:var(--ink);font-size:15px}.insight{margin:18px 24px 22px;padding:15px 17px;border-left:4px solid var(--accent);background:#FAF7EF;color:#394957;font-size:14px}.shot{background:#EEF2F5;padding:18px}.shot img{display:block;width:100%;height:auto;border:1px solid var(--line);border-radius:6px;background:#fff}
-.exp{display:grid;grid-template-columns:210px 1fr;gap:30px}.exp b{color:var(--navy)}.exp p{margin:0;color:var(--muted)}
-.contact{background:var(--navy);color:#fff;border-radius:12px;padding:34px}.contact .section-title{color:#D8E7F5}.contact p{color:#D8E0E8;max-width:680px}.contact .btn{border-color:#fff;color:#fff}.contact .primary{background:#fff;color:var(--navy)}
-footer{padding:30px 0 50px;color:var(--muted);font-size:13px}
-@media(max-width:760px){.links{display:none}.kpis,.tools{grid-template-columns:1fr 1fr}.exp{grid-template-columns:1fr;gap:8px}.project-head{flex-direction:column}.wrap{padding:0 18px}}
-@media(max-width:480px){.kpis,.tools{grid-template-columns:1fr}.hero{padding-top:55px}}
 
-.objective{margin:14px 24px 18px;padding:14px 16px;background:#F8FAFC;border-left:3px solid var(--navy);border-radius:8px;color:var(--muted);font-size:13px}.objective b{color:var(--navy)}
-.tooltip-feature{display:grid;grid-template-columns:1fr minmax(180px,250px);gap:16px;align-items:center;margin:18px 24px 24px;padding:18px;background:#F6F8FA;border:1px solid var(--line);border-radius:10px}.selector-feature{margin:0 24px 18px;padding:12px 16px;background:#F6F8FA;border:1px solid var(--line);border-radius:8px}.selector-feature b{color:var(--navy)}.selector-feature p{margin:4px 0 0;color:var(--muted);font-size:13px}.tooltip-copy b{display:block;color:var(--navy);font-size:15px;margin-bottom:5px}.tooltip-copy p{margin:0;color:var(--muted);font-size:13px}.tooltip-shot{background:#102A43;border-radius:8px;padding:8px}.tooltip-shot img{display:block;width:100%;height:auto;border-radius:5px}@media(max-width:700px){.tooltip-feature{grid-template-columns:1fr}.tooltip-shot{max-width:100%}}
+:root{
+  --navy:#102A43;
+  --blue:#1F5A91;
+  --ink:#172B3A;
+  --muted:#5B6B7A;
+  --bg:#F6F8FA;
+  --card:#fff;
+  --line:#D9E1E8;
+  --accent:#D9A441
+}
+
+*{
+  box-sizing:border-box
+}
+
+html{
+  scroll-behavior:smooth
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Inter,Arial,sans-serif;
+  line-height:1.55
+}
+
+a{
+  color:inherit
+}
+
+.wrap{
+  max-width:1120px;
+  margin:auto;
+  padding:0 28px
+}
+
+
+/* =========================
+   TOP NAVIGATION
+========================= */
+
+nav{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(246,248,250,.94);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line)
+}
+
+.nav{
+  height:62px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between
+}
+
+.brand{
+  font-weight:800;
+  color:var(--navy)
+}
+
+.links{
+  display:flex;
+  gap:24px;
+  font-size:14px;
+  color:var(--muted)
+}
+
+.links a{
+  text-decoration:none
+}
+
+.links a:hover{
+  color:var(--navy)
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  padding:82px 0 48px;
+  background:linear-gradient(180deg,#fff 0%,var(--bg) 100%)
+}
+
+.eyebrow{
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--blue);
+  font-weight:800
+}
+
+h1{
+  font-size:clamp(40px,6vw,68px);
+  line-height:1.02;
+  margin:10px 0 14px;
+  color:var(--navy);
+  max-width:760px
+}
+
+.hero p{
+  font-size:19px;
+  color:var(--muted);
+  max-width:760px
+}
+
+.cta{
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:24px
+}
+
+.btn{
+  display:inline-block;
+  padding:11px 18px;
+  border-radius:7px;
+  border:1px solid var(--navy);
+  text-decoration:none;
+  font-weight:700;
+  font-size:14px
+}
+
+.primary{
+  background:var(--navy);
+  color:#fff
+}
+
+.secondary{
+  background:#fff;
+  color:var(--navy)
+}
+
+
+/* =========================
+   KPI CARDS
+========================= */
+
+.kpis{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-top:38px
+}
+
+.kpi{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:20px;
+  border-radius:9px
+}
+
+.kpi b{
+  display:block;
+  font-size:25px;
+  color:var(--navy)
+}
+
+.kpi span{
+  font-size:12px;
+  color:var(--muted)
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section{
+  padding:68px 0;
+  border-top:1px solid var(--line)
+}
+
+.section-title{
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:.12em;
+  color:var(--blue);
+  font-weight:800;
+  margin-bottom:12px
+}
+
+.about{
+  max-width:780px;
+  font-size:18px;
+  color:var(--muted)
+}
+
+
+/* =========================
+   TOOLKIT
+========================= */
+
+.tools{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px
+}
+
+.tool{
+  background:#fff;
+  border:1px solid var(--line);
+  padding:18px;
+  border-radius:9px
+}
+
+.tool b{
+  color:var(--navy)
+}
+
+.tool span{
+  display:block;
+  color:var(--muted);
+  font-size:13px;
+  margin-top:5px
+}
+
+
+/* =========================
+   PROJECTS
+========================= */
+
+.projects{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:26px
+}
+
+.project{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:12px;
+  overflow:hidden
+}
+
+.project-head{
+  padding:24px 24px 10px;
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  align-items:start
+}
+
+.project h3{
+  margin:0;
+  color:var(--navy);
+  font-size:23px
+}
+
+.tag{
+  white-space:nowrap;
+  border:1px solid #B8C9D8;
+  color:var(--blue);
+  border-radius:20px;
+  padding:4px 10px;
+  font-size:12px;
+  font-weight:800
+}
+
+.desc{
+  padding:0 24px;
+  color:var(--muted);
+  max-width:900px
+}
+
+
+/* =========================
+   PROJECT NUMBERS
+========================= */
+
+.figs{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px 24px;
+  padding:16px 24px;
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  margin-top:14px
+}
+
+.fig{
+  font-size:13px;
+  color:var(--muted)
+}
+
+.fig b{
+  color:var(--ink);
+  font-size:15px
+}
+
+
+/* =========================
+   OBJECTIVE
+========================= */
+
+.objective{
+  margin:18px 24px;
+  padding:14px 16px;
+  background:#F8FAFC;
+  border-left:3px solid var(--navy);
+  border-radius:8px;
+  color:var(--muted);
+  font-size:13px
+}
+
+.objective b{
+  color:var(--navy)
+}
+
+
+/* =========================
+   DASHBOARD NAVIGATION
+========================= */
+
+.navigation-feature{
+  margin:20px 24px;
+  padding:20px;
+  background:#F6F8FA;
+  border:1px solid var(--line);
+  border-radius:10px
+}
+
+.navigation-feature-title{
+  color:var(--navy);
+  font-weight:800;
+  font-size:16px;
+  margin-bottom:6px
+}
+
+.navigation-feature-description{
+  color:var(--muted);
+  font-size:13px;
+  margin:0 0 15px
+}
+
+.navigation-items{
+  display:flex;
+  flex-wrap:wrap;
+  gap:9px
+}
+
+.navigation-item{
+  display:inline-flex;
+  align-items:center;
+  padding:7px 13px;
+  background:#fff;
+  border:1px solid #B8C9D8;
+  border-radius:20px;
+  color:var(--blue);
+  font-size:12px;
+  font-weight:700
+}
+
+.navigation-item.reset{
+  border-color:#D9A441;
+  color:#8A651C
+}
+
+
+/* =========================
+   INSIGHT
+========================= */
+
+.insight{
+  margin:18px 24px 22px;
+  padding:15px 17px;
+  border-left:4px solid var(--accent);
+  background:#FAF7EF;
+  color:#394957;
+  font-size:14px
+}
+
+
+/* =========================
+   DASHBOARD IMAGE
+========================= */
+
+.shot{
+  background:#EEF2F5;
+  padding:18px
+}
+
+.shot img{
+  display:block;
+  width:100%;
+  height:auto;
+  border:1px solid var(--line);
+  border-radius:6px;
+  background:#fff
+}
+
+
+/* =========================
+   TOOLTIP
+========================= */
+
+.tooltip-feature{
+  display:grid;
+  grid-template-columns:1fr minmax(180px,250px);
+  gap:16px;
+  align-items:center;
+  margin:18px 24px 24px;
+  padding:18px;
+  background:#F6F8FA;
+  border:1px solid var(--line);
+  border-radius:10px
+}
+
+.tooltip-copy b{
+  display:block;
+  color:var(--navy);
+  font-size:15px;
+  margin-bottom:5px
+}
+
+.tooltip-copy p{
+  margin:0;
+  color:var(--muted);
+  font-size:13px
+}
+
+.tooltip-shot{
+  background:#102A43;
+  border-radius:8px;
+  padding:8px
+}
+
+.tooltip-shot img{
+  display:block;
+  width:100%;
+  height:auto;
+  border-radius:5px
+}
+
+
+/* =========================
+   SELECTOR
+========================= */
+
+.selector-feature{
+  margin:0 24px 18px;
+  padding:12px 16px;
+  background:#F6F8FA;
+  border:1px solid var(--line);
+  border-radius:8px
+}
+
+.selector-feature b{
+  color:var(--navy)
+}
+
+.selector-feature p{
+  margin:4px 0 0;
+  color:var(--muted);
+  font-size:13px
+}
+
+
+/* =========================
+   EXPERIENCE
+========================= */
+
+.exp{
+  display:grid;
+  grid-template-columns:210px 1fr;
+  gap:30px
+}
+
+.exp b{
+  color:var(--navy)
+}
+
+.exp p{
+  margin:0;
+  color:var(--muted)
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact{
+  background:var(--navy);
+  color:#fff;
+  border-radius:12px;
+  padding:34px
+}
+
+.contact .section-title{
+  color:#D8E7F5
+}
+
+.contact p{
+  color:#D8E0E8;
+  max-width:680px
+}
+
+.contact .btn{
+  border-color:#fff;
+  color:#fff
+}
+
+.contact .primary{
+  background:#fff;
+  color:var(--navy)
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  padding:30px 0 50px;
+  color:var(--muted);
+  font-size:13px
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:760px){
+
+  .links{
+    display:none
+  }
+
+  .kpis,
+  .tools{
+    grid-template-columns:1fr 1fr
+  }
+
+  .exp{
+    grid-template-columns:1fr;
+    gap:8px
+  }
+
+  .project-head{
+    flex-direction:column
+  }
+
+  .wrap{
+    padding:0 18px
+  }
+
+}
+
+@media(max-width:700px){
+
+  .tooltip-feature{
+    grid-template-columns:1fr
+  }
+
+}
+
+@media(max-width:480px){
+
+  .kpis,
+  .tools{
+    grid-template-columns:1fr
+  }
+
+  .hero{
+    padding-top:55px
+  }
+
+}
+
 </style>
+
 </head>
+
+
 <body>
-<nav><div class="wrap nav"><div class="brand">Clara Youssef</div><div class="links"><a href="#profile">Profile</a><a href="#toolkit">Toolkit</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a></div></div></nav>
-<header class="hero"><div class="wrap">
-<div class="eyebrow">Data Analyst · Business Intelligence · Dashboard Development</div>
-<h1>Turning operational data into decisions people can act on.</h1>
-<p>I build performance, funnel and conversion dashboards across Power BI, Looker Studio, Excel and Google Sheets — with a focus on finding the story behind the number.</p>
-<div class="cta"><a class="btn primary" href="mailto:klarayoussef2003@gmail.com">Get in touch</a><a class="btn secondary" href="https://www.linkedin.com/in/clara-youssef-8a3908303" target="_blank">LinkedIn</a></div>
-<div class="kpis">
-<div class="kpi"><b>6</b><span>Dashboard projects</span></div>
-<div class="kpi"><b>6</b><span>Core analytics tools</span></div>
-<div class="kpi"><b>2025</b><span>Started Data Analyst role</span></div>
-<div class="kpi"><b>BI + Analysis</b><span>Primary focus</span></div>
-</div>
-</div></header>
+
+
+<!-- =========================
+     TOP NAVIGATION
+========================= -->
+
+<nav>
+
+  <div class="wrap nav">
+
+    <div class="brand">
+      Clara Youssef
+    </div>
+
+    <div class="links">
+
+      <a href="#profile">
+        Profile
+      </a>
+
+      <a href="#toolkit">
+        Toolkit
+      </a>
+
+      <a href="#projects">
+        Projects
+      </a>
+
+      <a href="#experience">
+        Experience
+      </a>
+
+      <a href="#contact">
+        Contact
+      </a>
+
+    </div>
+
+  </div>
+
+</nav>
+
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<header class="hero">
+
+  <div class="wrap">
+
+    <div class="eyebrow">
+      Data Analyst · Business Intelligence · Dashboard Development
+    </div>
+
+    <h1>
+      Turning operational data into decisions people can act on.
+    </h1>
+
+    <p>
+      I build performance, funnel and conversion dashboards across Power BI,
+      Looker Studio, Excel and Google Sheets — with a focus on finding the
+      story behind the number.
+    </p>
+
+
+    <div class="cta">
+
+      <a
+        class="btn primary"
+        href="mailto:klarayoussef2003@gmail.com"
+      >
+        Get in touch
+      </a>
+
+      <a
+        class="btn secondary"
+        href="https://www.linkedin.com/in/clara-youssef-8a3908303"
+        target="_blank"
+      >
+        LinkedIn
+      </a>
+
+    </div>
+
+
+    <!-- KPI -->
+
+    <div class="kpis">
+
+      <div class="kpi">
+
+        <b>7</b>
+
+        <span>
+          Dashboard projects
+        </span>
+
+      </div>
+
+
+      <div class="kpi">
+
+        <b>6</b>
+
+        <span>
+          Core analytics tools
+        </span>
+
+      </div>
+
+
+      <div class="kpi">
+
+        <b>2025</b>
+
+        <span>
+          Started Data Analyst role
+        </span>
+
+      </div>
+
+
+      <div class="kpi">
+
+        <b>BI + Analysis</b>
+
+        <span>
+          Primary focus
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+
 <main class="wrap">
-<section id="profile"><div class="section-title">Profile</div><div class="about">
-I work with sales, marketing and operational data to turn raw activity into recurring reporting and actionable insights. My strongest work sits at the intersection of performance monitoring and funnel analysis: not only what happened, but where the numbers are leaking and what a manager should look at next.
-</div></section>
-<section id="toolkit"><div class="section-title">Toolkit</div><div class="tools">
-<div class="tool"><b>Power BI</b><span>Strong · data modeling, DAX, interactive reporting</span></div>
-<div class="tool"><b>Looker Studio</b><span>Strong · filters, multi-source dashboards, reporting</span></div>
-<div class="tool"><b>Excel</b><span>Advanced · Pivot Tables, slicers, formulas</span></div>
-<div class="tool"><b>Google Sheets</b><span>Advanced · formula-driven operational dashboards</span></div>
-<div class="tool"><b>SQL</b><span>Basic–Intermediate · SELECT, WHERE, GROUP BY, JOIN</span></div>
-<div class="tool"><b>Python</b><span>Basic · Pandas &amp; NumPy for early-stage analysis</span></div>
-</div></section>
-<section id="projects"><div class="section-title">Selected Projects</div><div class="projects">
+
+
+<!-- =========================
+     PROFILE
+========================= -->
+
+<section id="profile">
+
+  <div class="section-title">
+    Profile
+  </div>
+
+  <div class="about">
+
+    I work with sales, marketing and operational data to turn raw activity
+    into recurring reporting and actionable insights. My strongest work
+    sits at the intersection of performance monitoring and funnel analysis:
+    not only what happened, but where the numbers are leaking and what a
+    manager should look at next.
+
+  </div>
+
+</section>
 
 
 
+<!-- =========================
+     TOOLKIT
+========================= -->
+
+<section id="toolkit">
+
+  <div class="section-title">
+    Toolkit
+  </div>
+
+
+  <div class="tools">
+
+
+    <div class="tool">
+
+      <b>
+        Power BI
+      </b>
+
+      <span>
+        Strong · data modeling, DAX, interactive reporting
+      </span>
+
+    </div>
+
+
+    <div class="tool">
+
+      <b>
+        Looker Studio
+      </b>
+
+      <span>
+        Strong · filters, multi-source dashboards, reporting
+      </span>
+
+    </div>
+
+
+    <div class="tool">
+
+      <b>
+        Excel
+      </b>
+
+      <span>
+        Advanced · Pivot Tables, slicers, formulas
+      </span>
+
+    </div>
+
+
+    <div class="tool">
+
+      <b>
+        Google Sheets
+      </b>
+
+      <span>
+        Advanced · formula-driven operational dashboards
+      </span>
+
+    </div>
+
+
+    <div class="tool">
+
+      <b>
+        SQL
+      </b>
+
+      <span>
+        Basic–Intermediate · SELECT, WHERE, GROUP BY, JOIN
+      </span>
+
+    </div>
+
+
+    <div class="tool">
+
+      <b>
+        Python
+      </b>
+
+      <span>
+        Basic · Pandas &amp; NumPy for early-stage analysis
+      </span>
+
+    </div>
+
+
+  </div>
+
+</section>
 
 
 
-<article class="project"><div class="project-head"><h3>Marketing Analysis — 2026</h3><span class="tag">Power BI</span></div>
-<p class="desc">Marketing performance dashboard analyzing marketer and developer contribution, fresh leads, fresh sales volume, transactions, source mix and local versus overseas performance.</p><div class="objective"><b>Objective:</b> Analyze marketing performance by marketer, developer, lead source and customer type to identify top-performing sources and measure fresh lead and sales performance.</div>
-<div class="figs"><div class="fig"><b>16K</b> fresh leads</div><div class="fig"><b>EGP 255M</b> fresh sales volume</div><div class="fig"><b>22</b> fresh transactions</div><div class="fig"><b>190</b> total transactions shown</div></div>
-<div class="insight"><b>Insight:</b> The dashboard makes source and marketer concentration visible: the Personal source leads the displayed marketer ranking by sales volume and transaction count.</div>
-<div class="shot"><img alt="Real estate marketing performance dashboard" src="assets/Marketing_Analysiss_portfolio_-_Power_BI1.png"/></div><div class="tooltip-feature"><div class="tooltip-copy"><b>Interactive Tooltip</b><p>Hover over the visual to explore lead-status details, including Fresh, Old and Referral 12M.</p></div><div class="tooltip-shot"><img alt="Marketing dashboard interactive tooltip" src="assets/marketing_tooltip.png"/></div></div></article><article class="project"><div class="project-head"><h3>Creeks &amp; Elsewhere Event — Aug 2026</h3><span class="tag">Power BI</span></div>
-<p class="desc">Event performance dashboard analyzing booked and completed meetings, sales managers, team leaders, projects, developers, client budgets, campaign sources and activity timing.</p><div class="objective"><b>Objective:</b> Evaluate event performance by tracking booked versus completed meetings, team performance, projects, developers, client budgets and follow-up actions.</div>
-<div class="figs"><div class="fig"><b>260</b> completed meetings</div><div class="fig"><b>~3,000</b> booked meetings</div><div class="fig"><b>8.7%</b> completion rate</div><div class="fig"><b>2 days</b> of event activity</div></div>
-<div class="insight"><b>Insight:</b> Only about 8.7% of booked meetings were completed, so attendance/follow-up is the clearest operational bottleneck visible in the dashboard.</div>
-<div class="shot"><img alt="Real estate event performance dashboard" src="assets/Event_Dashboared_portfolio_-_Power_BI.png"/></div></article><article class="project"><div class="project-head"><h3>Real Estate Company Analysis — 2026</h3><span class="tag">Looker Studio</span></div>
-<p class="desc">Yearly real-estate performance dashboard covering sales volume, transactions and completed meetings, with analysis by month, project, source, unit type, branch and leadership.</p><div class="objective"><b>Objective:</b> Monitor yearly real-estate performance across sales volume, transactions, meetings, projects, sources, unit types and organizational performance.</div>
-<div class="figs"><div class="fig"><b>EGP 2.38B</b> sales volume</div><div class="fig"><b>190</b> transactions</div><div class="fig"><b>3,548</b> completed meetings</div><div class="fig"><b>8 months</b> Jan–Aug trend</div></div>
-<div class="insight"><b>Insight:</b> July is the highest sales-volume month in the displayed period, while the dashboard also shows a strong local-sales share, making month and source mix useful lenses for performance review.</div>
-<div class="shot"><img alt="Real estate sales performance dashboard" src="assets/Kreativ_Analysis_2026_2.png"/></div></article><article class="project"><div class="project-head"><h3>Team Performance Analysis — Nov to Aug</h3><span class="tag">Google Sheets</span></div>
-<p class="desc">Team-level performance dashboard connecting meetings, transactions, sales volume, source, project, unit type and meeting format.</p><div class="objective"><b>Objective:</b> Evaluate team performance by connecting meetings, transactions, sales volume, closing rate, source, project, unit type and meeting format.</div>
-<div class="figs"><div class="fig"><b>EGP 386.4M</b> sales volume</div><div class="fig"><b>646</b> completed meetings</div><div class="fig"><b>36</b> transactions</div><div class="fig"><b>5.57%</b> closing rate</div></div>
-<div class="insight"><b>Insight:</b> The main performance theme is high meeting volume paired with a low closing rate, indicating that increasing meetings alone is not enough without improving downstream conversion.</div>
-<div class="shot"><img alt="Team performance analysis dashboard" src="assets/Teams_Analysis_Nov_-_Aug_-_Google_Sheets.png"/></div></article><article class="project"><div class="project-head"><h3>Individual Sales Performance</h3><span class="tag">Google Sheets</span></div>
-<p class="desc">Individual sales dashboard tracking sales volume, meetings, transactions, conversion, unit type, project, source, month and local versus overseas performance.</p><div class="objective"><b>Objective:</b> Provide a dynamic view of individual salesperson performance across sales volume, meetings, transactions, conversion, projects, unit types and lead sources.</div>
-<div class="figs"><div class="fig"><b>EGP 109.7M</b> sales volume</div><div class="fig"><b>50</b> completed meetings</div><div class="fig"><b>9.5</b> transactions</div><div class="fig"><b>19%</b> conversion</div></div>
-<div class="insight"><b>Insight:</b> The selected rep's performance is concentrated in apartments/chalets and local business, while the dashboard provides the dimensions needed to trace the mix behind the result.</div>
-<div class="selector-feature"><b>Dynamic Sales Selector</b><p>Select a salesperson from the <strong>Sales Name</strong> dropdown to dynamically display that representative’s performance dashboard.</p></div><div class="shot"><img alt="Individual sales performance dashboard" src="assets/Sales_dashboard_-_Google_Sheets4.png"/></div></article><article class="project"><div class="project-head"><h3>Sales &amp; Profitability Analysis — 2011–2014</h3><span class="tag">Excel</span></div>
-<p class="desc">Four-year retail analysis using Pivot Tables and slicers to evaluate sales, profit, orders, average order value, country and product-category performance.</p><div class="objective"><b>Objective:</b> Analyze four years of retail sales and profitability to identify trends across products, countries, orders, average order value and growth.</div>
-<div class="figs"><div class="fig"><b>110.4M</b> total sales</div><div class="fig"><b>9.9M</b> total profit</div><div class="fig"><b>31,465</b> orders</div><div class="fig"><b>3,508</b> avg. order value</div></div>
-<div class="insight"><b>Insight:</b> Sales peak in 2013 at about 43.9M, while margin moves from 3.4% in 2012 to 17.3% in 2014, making margin trend a useful profitability lens.</div>
-<div class="shot"><img alt="Excel sales and profitability dashboard" src="assets/excel_project4.png"/></div></article></div></section>
-<section id="experience"><div class="section-title">Experience</div><div class="exp">
-<div><b>Data Analyst</b><br/><span>Real Estate Company<br/>Sep 2025 – Present</span></div>
-<div><p>Translate sales and marketing data into daily reporting; design and maintain Power BI, Looker Studio, Excel and Google Sheets dashboards; analyze performance patterns and surface operational gaps for management review.</p></div>
-</div></section>
-<section id="contact"><div class="contact"><div class="section-title">Contact</div>
-<h2 style="margin:0 0 8px;font-size:30px">Open to Data Analyst opportunities.</h2>
-<p>Interested in Data Analyst, BI Analyst, Reporting Analyst and Business Analyst opportunities, as well as dashboard and reporting work.</p>
-<div class="cta"><a class="btn primary" href="mailto:klarayoussef2003@gmail.com">Email me</a><a class="btn" href="https://www.linkedin.com/in/clara-youssef-8a3908303" target="_blank">LinkedIn</a></div>
-</div></section>
+<!-- =========================
+     PROJECTS
+========================= -->
+
+<section id="projects">
+
+  <div class="section-title">
+    Selected Projects
+  </div>
+
+
+  <div class="projects">
+
+
+
+    <!-- ==================================================
+         NEW BRANCH DASHBOARD
+    =================================================== -->
+
+    <article class="project">
+
+
+      <div class="project-head">
+
+        <h3>
+          Branch Overview Analysis — 2026
+        </h3>
+
+        <span class="tag">
+          Power BI
+        </span>
+
+      </div>
+
+
+      <p class="desc">
+
+        Interactive branch performance dashboard analyzing sales volume,
+        transactions, booked and completed meetings, sales funnel conversion,
+        client budget distribution and deal duration.
+
+      </p>
+
+
+      <div class="objective">
+
+        <b>
+          Objective:
+        </b>
+
+        Monitor branch performance across the sales funnel and identify
+        conversion gaps, client budget patterns and deal-closing behavior.
+
+      </div>
+
+
+      <!-- DASHBOARD KPIs -->
+
+      <div class="figs">
+
+        <div class="fig">
+          <b>EGP 879M</b>
+          sales volume
+        </div>
+
+        <div class="fig">
+          <b>72</b>
+          transactions
+        </div>
+
+        <div class="fig">
+          <b>3,065</b>
+          booked meetings
+        </div>
+
+        <div class="fig">
+          <b>1,269</b>
+          done meetings
+        </div>
+
+      </div>
+
+
+      <!-- ==============================
+           DASHBOARD NAVIGATION
+      =============================== -->
+
+      <div class="navigation-feature">
+
+        <div class="navigation-feature-title">
+
+          Dashboard Navigation
+
+        </div>
+
+
+        <p class="navigation-feature-description">
+
+          The dashboard includes a dedicated navigation bar that allows users
+          to move between different analytical views and quickly access the
+          information they need.
+
+        </p>
+
+
+        <div class="navigation-items">
+
+
+          <span class="navigation-item">
+            Overview
+          </span>
+
+
+          <span class="navigation-item">
+            Deals Details
+          </span>
+
+
+          <span class="navigation-item">
+            Meeting &amp; Cases Study
+          </span>
+
+
+          <span class="navigation-item">
+            Notes
+          </span>
+
+
+          <span class="navigation-item reset">
+            Reset
+          </span>
+
+
+        </div>
+
+      </div>
+
+
+      <!-- INSIGHT -->
+
+      <div class="insight">
+
+        <b>
+          Insight:
+        </b>
+
+        The dashboard tracks the full sales funnel from fresh leads to
+        transactions, while highlighting conversion rates, client budget mix,
+        deal duration and pending versus completed outcomes.
+
+      </div>
+
+
+      <!-- DASHBOARD IMAGE -->
+
+      <div class="shot">
+
+        <img
+          alt="Branch Overview Power BI Dashboard"
+          src="assets/Branch_Dashboard_Power_BI.png"
+        />
+
+      </div>
+
+
+      <!-- PDF -->
+
+      <div
+        class="cta"
+        style="padding:0 24px 24px"
+      >
+
+        <a
+          class="btn primary"
+          href="Branch%20Dashboard%20-%20Power%20BI.pdf"
+          target="_blank"
+        >
+          View Full Dashboard
+        </a>
+
+      </div>
+
+
+    </article>
+
+
+
+    <!-- ==================================================
+         MARKETING ANALYSIS
+    =================================================== -->
+
+    <article class="project">
+
+
+      <div class="project-head">
+
+        <h3>
+          Marketing Analysis — 2026
+        </h3>
+
+        <span class="tag">
+          Power BI
+        </span>
+
+      </div>
+
+
+      <p class="desc">
+
+        Marketing performance dashboard analyzing marketer and developer
+        contribution, fresh leads, fresh sales volume, transactions,
+        source mix and local versus overseas performance.
+
+      </p>
+
+
+      <div class="objective">
+
+        <b>
+          Objective:
+        </b>
+
+        Analyze marketing performance by marketer, developer, lead source
+        and customer type to identify top-performing sources and measure
+        fresh lead and sales performance.
+
+      </div>
+
+
+      <div class="figs">
+
+        <div class="fig">
+          <b>16K</b>
+          fresh leads
+        </div>
+
+        <div class="fig">
+          <b>EGP 255M</b>
+          fresh sales volume
+        </div>
+
+        <div class="fig">
+          <b>22</b>
+          fresh transactions
+        </div>
+
+        <div class="fig">
+          <b>190</b>
+          total transactions shown
+        </div>
+
+      </div>
+
+
+      <div class="insight">
+
+        <b>
+          Insight:
+        </b>
+
+        The dashboard makes source and marketer concentration visible:
+        the Personal source leads the displayed marketer ranking by sales
+        volume and transaction count.
+
+      </div>
+
+
+      <div class="shot">
+
+        <img
+          alt="Real estate marketing performance dashboard"
+          src="assets/Marketing_Analysiss_portfolio_-_Power_BI1.png"
+        />
+
+      </div>
+
+
+      <div class="tooltip-feature">
+
+        <div class="tooltip-copy">
+
+          <b>
+            Interactive Tooltip
+          </b>
+
+          <p>
+
+            Hover over the visual to explore lead-status details,
+            including Fresh, Old and Referral 12M.
+
+          </p>
+
+        </div>
+
+
+        <div class="tooltip-shot">
+
+          <img
+            alt="Marketing dashboard interactive tooltip"
+            src="assets/marketing_tooltip.png"
+          />
+
+        </div>
+
+      </div>
+
+
+    </article>
+
+
+
+    <!-- ==================================================
+         EVENT DASHBOARD
+    =================================================== -->
+
+    <article class="project">
+
+
+      <div class="project-head">
+
+        <h3>
+          Creeks &amp; Elsewhere Event — Aug 2026
+        </h3>
+
+        <span class="tag">
+          Power BI
+        </span>
+
+      </div>
+
+
+      <p class="desc">
+
+        Event performance dashboard analyzing booked and completed meetings,
+        sales managers, team leaders, projects, developers, client budgets,
+        campaign sources and activity timing.
+
+      </p>
+
+
+      <div class="objective">
+
+        <b>
+          Objective:
+        </b>
+
+        Evaluate event performance by tracking booked versus completed
+        meetings, team performance, projects, developers, client budgets
+        and follow-up actions.
+
+      </div>
+
+
+      <div class="figs">
+
+        <div class="fig">
+          <b>260</b>
+          completed meetings
+        </div>
+
+        <div class="fig">
+          <b>~3,000</b>
+          booked meetings
+        </div>
+
+        <div class="fig">
+          <b>8.7%</b>
+          completion rate
+        </div>
+
+        <div class="fig">
+          <b>2 days</b>
+          of event activity
+        </div>
+
+      </div>
+
+
+      <div class="insight">
+
+        <b>
+          Insight:
+        </b>
+
+        Only about 8.7% of booked meetings were completed, so attendance/
+        follow-up is the clearest operational bottleneck visible in the dashboard.
+
+      </div>
+
+
+      <div class="shot">
+
+        <img
+          alt="Real estate event performance dashboard"
+          src="assets/Event_Dashboared_portfolio_-_Power_BI.png"
+        />
+
+      </div>
+
+
+    </article>
+
+
+
+    <!-- ==================================================
+         REAL ESTATE COMPANY
+    =================================================== -->
+
+    <article class="project">
+
+
+      <div class="project-head">
+
+        <h3>
+          Real Estate Company Analysis — 2026
+        </h3>
+
+        <span class="tag">
+          Looker Studio
+        </span>
+
+      </div>
+
+
+      <p class="desc">
+
+        Yearly real-estate performance dashboard covering sales volume,
+        transactions and completed meetings, with analysis by month,
+        project, source, unit type, branch and leadership.
+
+      </p>
+
+
+      <div class="objective">
+
+        <b>
+          Objective:
+        </b>
+
+        Monitor yearly real-estate performance across sales volume,
+        transactions, meetings, projects, sources, unit types and
+        organizational performance.
+
+      </div>
+
+
+      <div class="figs">
+
+        <div class="fig">
+          <b>EGP 2.38B</b>
+          sales volume
+        </div>
+
+        <div class="fig">
+          <b>190</b>
+          transactions
+        </div>
+
+        <div class="fig">
+          <b>3,548</b>
+          completed meetings
+        </div>
+
+        <div class="fig">
+          <b>8 months</b>
+          Jan–Aug trend
+        </div>
+
+      </div>
+
+
+      <div class="insight">
+
+        <b>
+          Insight:
+        </b>
+
+        July is the highest sales-volume month in the displayed period,
+        while the dashboard also shows a strong local-sales share,
+        making month and source mix useful lenses for performance review.
+
+      </div>
+
+
+      <div class="shot">
+
+        <img
+          alt="Real estate sales performance dashboard"
+          src="assets/Kreativ_Analysis_2026_2.png"
+        />
+
+      </div>
+
+
+    </article>
+
+
+
+    <!-- ==================================================
+         TEAM PERFORMANCE
+    =================================================== -->
+
+    <article class="project">
+
+
+      <div class="project-head">
+
+        <h3>
+          Team Performance Analysis — Nov to Aug
+        </h3>
+
+        <span class="tag">
+          Google Sheets
+        </span>
+
+      </div>
+
+
+      <p class="desc">
+
+        Team-level performance dashboard connecting meetings, transactions,
+        sales volume, source, project, unit type and meeting format.
+
+      </p>
+
+
+      <div class="objective">
+
+        <b>
+          Objective:
+        </b>
+
+        Evaluate team performance by connecting meetings, transactions,
+        sales volume, closing rate, source, project, unit type and
+        meeting format.
+
+      </div>
+
+
+      <div class="figs">
+
+        <div class="fig">
+          <b>EGP 386.4M</b>
+          sales volume
+        </div>
+
+        <div class="fig">
+          <b>646</b>
+          completed meetings
+        </div>
+
+        <div class="fig">
+          <b>36</b>
+          transactions
+        </div>
+
+        <div class="fig">
+          <b>5.57%</b>
+          closing rate
+        </div>
+
+      </div>
+
+
+      <div class="insight">
+
+        <b>
+          Insight:
+        </b>
+
+        The main performance theme is high meeting volume paired with a
+        low closing rate, indicating that increasing meetings alone is not
+        enough without improving downstream conversion.
+
+      </div>
+
+
+      <div class="shot">
+
+        <img
+          alt="Team performance analysis dashboard"
+          src="assets/Teams_Analysis_Nov_-_Aug_-_Google_Sheets.png"
+        />
+
+      </div>
+
+
+    </article>
+
+
+
+    <!-- ==================================================
+         INDIVIDUAL SALES
+    =================================================== -->
+
+    <article class="project">
+
+
+      <div class="project-head">
+
+        <h3>
+          Individual Sales Performance
+        </h3>
+
+        <span class="tag">
+          Google Sheets
+        </span>
+
+      </div>
+
+
+      <p class="desc">
+
+        Individual sales dashboard tracking sales volume, meetings,
+        transactions, conversion, unit type, project, source, month
+        and local versus overseas performance.
+
+      </p>
+
+
+      <div class="objective">
+
+        <b>
+          Objective:
+        </b>
+
+        Provide a dynamic view of individual salesperson performance
+        across sales volume, meetings, transactions, conversion,
+        projects, unit types and lead sources.
+
+      </div>
+
+
+      <div class="figs">
+
+        <div class="fig">
+          <b>EGP 109.7M</b>
+          sales volume
+        </div>
+
+        <div class="fig">
+          <b>50</b>
+          completed meetings
+        </div>
+
+        <div class="fig">
+          <b>9.5</b>
+          transactions
+        </div>
+
+        <div class="fig">
+          <b>19%</b>
+          conversion
+        </div>
+
+      </div>
+
+
+      <div class="selector-feature">
+
+        <b>
+          Dynamic Sales Selector
+        </b>
+
+        <p>
+
+          Select a salesperson from the
+          <strong>Sales Name</strong>
+          dropdown to dynamically display that representative’s
+          performance dashboard.
+
+        </p>
+
+      </div>
+
+
+      <div class="shot">
+
+        <img
+          alt="Individual sales performance dashboard"
+          src="assets/Sales_dashboard_-_Google_Sheets4.png"
+        />
+
+      </div>
+
+
+    </article>
+
+
+
+    <!-- ==================================================
+         EXCEL PROJECT
+    =================================================== -->
+
+    <article class="project">
+
+
+      <div class="project-head">
+
+        <h3>
+          Sales &amp; Profitability Analysis — 2011–2014
+        </h3>
+
+        <span class="tag">
+          Excel
+        </span>
+
+      </div>
+
+
+      <p class="desc">
+
+        Four-year retail analysis using Pivot Tables and slicers to evaluate
+        sales, profit, orders, average order value, country and
+        product-category performance.
+
+      </p>
+
+
+      <div class="objective">
+
+        <b>
+          Objective:
+        </b>
+
+        Analyze four years of retail sales and profitability to identify
+        trends across products, countries, orders, average order value
+        and growth.
+
+      </div>
+
+
+      <div class="figs">
+
+        <div class="fig">
+          <b>110.4M</b>
+          total sales
+        </div>
+
+        <div class="fig">
+          <b>9.9M</b>
+          total profit
+        </div>
+
+        <div class="fig">
+          <b>31,465</b>
+          orders
+        </div>
+
+        <div class="fig">
+          <b>3,508</b>
+          avg. order value
+        </div>
+
+      </div>
+
+
+      <div class="insight">
+
+        <b>
+          Insight:
+        </b>
+
+        Sales peak in 2013 at about 43.9M, while margin moves from
+        3.4% in 2012 to 17.3% in 2014, making margin trend a useful
+        profitability lens.
+
+      </div>
+
+
+      <div class="shot">
+
+        <img
+          alt="Excel sales and profitability dashboard"
+          src="assets/excel_project4.png"
+        />
+
+      </div>
+
+
+    </article>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+  <div class="section-title">
+    Experience
+  </div>
+
+
+  <div class="exp">
+
+
+    <div>
+
+      <b>
+        Data Analyst
+      </b>
+
+      <br>
+
+      <span>
+        Real Estate Company
+        <br>
+        Sep 2025 – Present
+      </span>
+
+    </div>
+
+
+    <div>
+
+      <p>
+
+        Translate sales and marketing data into daily reporting;
+        design and maintain Power BI, Looker Studio, Excel and Google
+        Sheets dashboards; analyze performance patterns and surface
+        operational gaps for management review.
+
+      </p>
+
+    </div>
+
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+
+  <div class="contact">
+
+
+    <div class="section-title">
+      Contact
+    </div>
+
+
+    <h2 style="margin:0 0 8px;font-size:30px">
+
+      Open to Data Analyst opportunities.
+
+    </h2>
+
+
+    <p>
+
+      Interested in Data Analyst, BI Analyst, Reporting Analyst and
+      Business Analyst opportunities, as well as dashboard and
+      reporting work.
+
+    </p>
+
+
+    <div class="cta">
+
+
+      <a
+        class="btn primary"
+        href="mailto:klarayoussef2003@gmail.com"
+      >
+        Email me
+      </a>
+
+
+      <a
+        class="btn"
+        href="https://www.linkedin.com/in/clara-youssef-8a3908303"
+        target="_blank"
+      >
+        LinkedIn
+      </a>
+
+
+    </div>
+
+
+  </div>
+
+
+</section>
+
+
 </main>
-<footer class="wrap">Clara Youssef — Data Analyst · Alexandria, Egypt</footer>
-</body></html>
+
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer class="wrap">
+
+  Clara Youssef — Data Analyst · Alexandria, Egypt
+
+</footer>
+
+
+</body>
+
+</html>
