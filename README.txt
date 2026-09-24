@@ -1,1 +1,0 @@
-Portfolio assembled with the original project files exactly as supplied. No project names, people names, charts, colors, numbers, masking, blurring, or cropping were changed. Only the six project images in the portfolio were replaced with renders of the original project PDFs.
